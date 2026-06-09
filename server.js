@@ -2,7 +2,7 @@ const express = require('express');
 const pool = require('./config/db'); // This pulls in your pgAdmin connection settings
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Middleware to parse incoming JSON requests
 app.use(express.json());
